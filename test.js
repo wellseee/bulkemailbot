@@ -3,7 +3,8 @@ var BulkEmailBot = require('./lib/bulkemailbot'),
     userPassword = 'YOUR PASSWORD',
     userService = 'Gmail',
     userName = 'First Last',
-    user = new BulkEmailBot(userName, userEmail, userService, userPassword);
+    fromAddress = 'Name <example@email.com>',
+    user = new BulkEmailBot(userName, userEmail, userService, userPassword, fromAddress);
 
 // write your subject line and email message here.
 // $fName is currently the only supported replacement text

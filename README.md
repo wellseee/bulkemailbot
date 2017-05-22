@@ -1,17 +1,14 @@
 # bulkemailbot
 A simple email client for Node.js. Quickly send personalized emails imported from a CSV file.
 
-GitHub repository: [github.com/PsychicCat/bulkemailbot][repo]
+Forked from GitHub repository: [github.com/PsychicCat/bulkemailbot][repo]
 Dependencies: [Nodemailer][nodemailer], [csvtojson][csvtojson].
 
 ## License
 ISC, open source. See LICENSE file.
 
-## install via NPM:
-    npm install bulkemailbot
-
 ## or install via GitHub:
-    git clone https://github.com/PsychicCat/bulkemailbot
+    git clone https://github.com/wellseee/bulkemailbot
     cd bulkemailbot
     npm install
 
@@ -27,7 +24,7 @@ If not installed via NPM, provide the path to lib/bulkemailbot.js
         userPassword = 'YOUR PASSWORD',
         userService = 'Gmail', //see Nodemailer for other supported email services
         userName = 'yourFirstName yourLastName',
-        user = new BulkEmailBot(userName, userEmail, userService, userPassword);
+        user = new BulkEmailBot(userName, userEmail, userService, userPassword, fromAddress);
 
 ## Create a message template
 Note: only $fName (firstName) is supported at this time.
@@ -37,7 +34,7 @@ Note: only $fName (firstName) is supported at this time.
         template: 'Hi $fName, thanks for the interview!'
     }
 
-## Prepare recipient list in CSV file 
+## Prepare recipient list in CSV file
 *   Example: [recipients.csv][csv]
 
 ## Send bulk emails!
@@ -53,14 +50,14 @@ Example:
         }
     });
 Response:
-    
+
     Message sent to  [ 'email@email.com' ]
     Message sent to  [ 'email2@email.com' ]
     Message sent to  [ 'telzrowb@gmail.com' ]
- 
-    
-    
-    
+
+
+
+
 
 
 
